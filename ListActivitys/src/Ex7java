@@ -1,0 +1,14 @@
+import java.util.Scanner;
+public class Ex7 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int[][] mat = new int[3][3];
+        for (int i = 0; i < 3; i++)
+            for (int j = 0; j < 3; j++) mat[i][j] = sc.nextInt();
+        boolean simetrica = true;
+        for (int i = 0; i < 3 && simetrica; i++)
+            for (int j = i + 1; j < 3; j++)
+                if (mat[i][j] != mat[j][i]) { simetrica = false; break; }
+        System.out.println(simetrica ? "A matriz É simétrica." : "A matriz NÃO é simétrica.");
+    }
+}
