@@ -1,18 +1,45 @@
-## Getting Started
+# BubbleSort-Activity — UNISENAI 3º Período
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Implementação dos algoritmos de ordenação quadráticos em Java para análise comparativa.
 
-## Folder Structure
+## Algoritmos Implementados
+- Bubble Sort (com otimização de flag de troca)
+- Selection Sort
+- Insertion Sort
 
-The workspace contains two folders by default, where:
+## Estrutura do Projeto
+```
+BubbleSort-Activity/
+├── src/
+│   ├── App.java         ← Ponto de entrada principal
+│   ├── Ordenacao.java   ← Implementação dos 3 algoritmos
+│   ├── Relatorio.java   ← Tabela comparativa de resultados
+│   └── Vetor.java       ← Leitura dos arquivos de dados
+├── dados/
+│   ├── 1000_ordenado.txt
+│   ├── 1000_desordenado.txt
+│   ├── 1000_inverso.txt
+│   ├── 5000_ordenado.txt
+│   ├── 5000_desordenado.txt
+│   └── 5000_inverso.txt
+└── bin/                 ← Classes compiladas (gerado pelo javac)
+```
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Como Executar
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+### Compilar
+```bash
+javac -encoding UTF-8 -d bin src/*.java
+```
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+### Executar (a partir da raiz do projeto)
+```bash
+java -Dfile.encoding=UTF-8 -cp bin App
+```
 
-## Dependency Management
+O programa localizará automaticamente a pasta `dados/` e processará todos os arquivos .txt encontrados.
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## Métricas Coletadas
+- Tempo de execução (ms)
+- Quantidade de comparações realizadas
+- Quantidade de trocas/movimentações realizadas
